@@ -285,6 +285,12 @@ nav {
     }
 }
 
+#home.active,
+#menu.active,
+#contact.active {
+    color: var(--primary-600)
+}
+
 div#content {
     flex: 1;
     padding-inline: var(--space-20);

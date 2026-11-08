@@ -15,12 +15,13 @@ heroTitle.textContent = 'Comida de casa para todos';
 const heroDescription = document.createElement('p');
 heroDescription.textContent = 'Recetas de familia, ingredientes frescos y una mesa donde grandes y chicos se sienten en casa.';
 
-const heroCTA = document.createElement('button');
-heroCTA.textContent = 'Ver el menú';
 
-export default function homePage() {
+export default function homePage(showMenu) {
     const homeWrapper = document.createElement('section');
     homeWrapper.id = "home-content";
+    const heroCTA = document.createElement('button');
+    heroCTA.textContent = 'Ver el menú';
+    heroCTA.addEventListener('click', showMenu);
     homeWrapper.append(tagline, heroTitle, heroDescription, heroCTA);
     return homeWrapper;
 };
